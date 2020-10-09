@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cstddef": "cpp",
+			"cstdint": "cpp",
+			"cstring": "cpp",
+			"xtr1common": "cpp"
+		}
+	}
+}
