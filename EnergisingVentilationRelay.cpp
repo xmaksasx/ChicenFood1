@@ -4,9 +4,9 @@ void WorkVentilationRelay(int VentilationTime[], int arraySize)
 {
     for (uint8_t i = 0; i < arraySize; i++)
     {
-        if (DateTimeNow.hour() == VentilationTime[i] && DateTimeNow.minute() == 20)
+        if (DateTimeNow.hour() == VentilationTime[i] && DateTimeNow.minute() == 30)
             digitalWrite(relayVentilation,LOW );
-        if (DateTimeNow.hour() == VentilationTime[i] && DateTimeNow.minute() > 25)
+        if (DateTimeNow.hour() == VentilationTime[i] && DateTimeNow.minute() > 35)
             digitalWrite(relayVentilation, HIGH);
     }
 }

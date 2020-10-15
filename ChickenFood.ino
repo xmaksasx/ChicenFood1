@@ -14,9 +14,9 @@ void setup()
 
   FeedingMode = EEPROM.read(0);
   VentilationMode = EEPROM.read(1);
-  if (FeedingMode < 3 || FeedingMode > 6)
-    FeedingMode = 3;
-  if (VentilationMode < 4 || FeedingMode > 11)
+  if (FeedingMode < 2 || FeedingMode > 6)
+    FeedingMode = 2;
+  if (VentilationMode < 4 || VentilationMode > 10)
     VentilationMode = 4;
 
   pinMode(nextMenuBtn, INPUT);
@@ -157,7 +157,7 @@ void ShowSettings()
     {
       FeedingMode++;
       if (FeedingMode > 6)
-        FeedingMode = 3;
+        FeedingMode = 2;
       delay(150);
     }
     uint8_t set = digitalRead(btn3);

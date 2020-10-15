@@ -22,7 +22,7 @@ void WorkFoodRelay(TimesFood timesFood[], int arraySize)
     for (uint8_t i = 0; i < arraySize; i++)
     {
 
-        if ((DateTimeNow.hour() == timesFood[i].hour && DateTimeNow.minute() > 15 && DateTimeNow.minute() < 20) && timesFood[i].stateRelayLeft)
+        if ((DateTimeNow.hour() == timesFood[i].hour && DateTimeNow.minute() > 10 && DateTimeNow.minute() < 15) && timesFood[i].stateRelayLeft)
         {
             Serial.print(DateTimeNow.hour());
             Serial.print("  ");
@@ -33,7 +33,7 @@ void WorkFoodRelay(TimesFood timesFood[], int arraySize)
             WorkMillis(relayFoodLeft, &timesFood[i].stateRelayLeft);
         }
 
-        if ((DateTimeNow.hour() == timesFood[i].hour && DateTimeNow.minute() > 25 && DateTimeNow.minute() < 30) && timesFood[i].stateRelayRight)
+        if ((DateTimeNow.hour() == timesFood[i].hour && DateTimeNow.minute() > 20 && DateTimeNow.minute() < 25) && timesFood[i].stateRelayRight)
         {
             Serial.print(DateTimeNow.hour());
             Serial.print("  ");
@@ -59,8 +59,10 @@ void StartFeeding(int idx)
 
     switch (idx)
     {
+    case 2:
+        WorkFoodRelay(TimesFood2, sizeof(TimesFood2) / sizeof(TimesFood));
+        break;
     case 3:
-
         WorkFoodRelay(TimesFood3, sizeof(TimesFood3) / sizeof(TimesFood));
         break;
     case 4:
@@ -99,7 +101,7 @@ void TestTime(int *timeTest, uint8_t pin, uint8_t mode)
 void StartTestFood(uint8_t mode, uint8_t relay)
 {
     lcd.setCursor(0, 1);
-    if (relay == 25)
+    if (relay == 25)        // реле для левой кормушки на 25 пине
     {
         lcd.print("Test Left - ");
         lcd.setCursor(12, 1);

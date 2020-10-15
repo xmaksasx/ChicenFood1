@@ -19,6 +19,7 @@ struct TimesFood
 };
 
 /// Времена включения кормушек
+TimesFood TimesFood2[] = {{10, true, true}, {22, true, true}};
 TimesFood TimesFood3[] = {{8, true, true}, {16, true, true}, {0, true, true}};
 TimesFood TimesFood4[] = {{6, true, true}, {12, true, true}, {18, true, true}, {23, true, true}};
 TimesFood TimesFood5[] = {{6, true, true}, {11, true, true}, {16, true, true}, {21, true, true}, {1, true, true}};
