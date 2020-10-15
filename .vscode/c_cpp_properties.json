@@ -3,15 +3,22 @@
         {
             "name": "Win32",
             "includePath": [
+                "c:\\Program Files\\Arduino\\libraries\\**",
+                "c:\\Program Files\\Arduino\\tools\\**",
+                "C:\\Program Files\\Arduino\\hardware\\arduino\\avr\\**",
+                "C:\\Program Files\\Arduino\\hardware\\tools\\**",
                 "C:\\Program Files (x86)\\Arduino\\tools\\**",
                 "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
                 "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\**",
                 "c:\\Users\\xmaks\\Documents\\Arduino\\libraries\\**",
                 "C:\\Program Files (x86)\\Arduino\\libraries\\**",
-                "c:\\Users\\xmaks\\Documents\\Arduino\\libraries\\RTClib\\**"
+                "c:\\Users\\xmaks\\Documents\\Arduino\\libraries\\RTClib\\**",
+                "C:\\Program Files\\Arduino\\hardware\\arduino\\avr\\**",
+                "C:\\Program Files\\Arduino\\tools\\**"
             ],
             "forcedInclude": [
-                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h",
+                "C:\\Program Files\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
             ],
             "intelliSenseMode": "msvc-x64",
             "compilerPath": "D:/Ide/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe",
